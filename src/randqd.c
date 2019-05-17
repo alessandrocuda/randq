@@ -1,3 +1,6 @@
+#include <time.h>
+#include <stdbool.h>
+
 #include "randqd.h"
 
 /*
@@ -22,29 +25,40 @@
  * IN THE SOFTWARE.
  */
 
+bool is_rseed_init = false;
+uint32_t rqd_seed;
 
+void init_rseed(uint32_t start_seed)
+{
+    rqd_seed = start_seed;
+    is_rseed_init = true;
+}
 
 /**
  * Return a random sample in the range [0, 2^32 - 1].
  * look in  "Numerical Recipes in C" Second Edition 
  * for the numbers explanation
  *
- * \param       x   PRNG state
  * \return      Random number between [0, 2^32 - 1]
  */
-inline uint32_t randqd_uint32(uint32_t x)
+uint32_t randqd_uint32()
 {
-    return (uint32_t) (1664525UL * x + 1013904223UL);
+    if (is_rseed_init == false)
+    {
+        init_rseed((uint32_t) time(NULL));
+        is_rseed_init = true;
+    }
+    
+    rqd_seed = (uint32_t) (1664525UL * rqd_seed + 1013904223UL);
+    return rqd_seed;
 }
 
 /**
  * Return a random number in the range [0, 1)
  *
- * \param       x   PRNG state
  * \return      Random number between [0, 1)
  */
-inline double randqd_double(uint32_t x)
+double randqd_double()
 {
-    return randqd_uint32(x) / (double) (1L << 32);
+    return randqd_uint32() / (double) (1L << 32);
 }
-
