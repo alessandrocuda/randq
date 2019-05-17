@@ -1,4 +1,3 @@
-#include <time.h>
 #include <stdbool.h>
 
 #include "randqd.h"
@@ -26,12 +25,17 @@
  */
 
 bool is_rseed_init = false;
-uint32_t rqd_seed;
+uint32_t rqd_seed = 0UL;
 
+
+/**
+ * Init the First Seed
+ *
+ * \start_seed      Started seed
+ */
 void init_rseed(uint32_t start_seed)
 {
     rqd_seed = start_seed;
-    is_rseed_init = true;
 }
 
 /**
@@ -42,13 +46,7 @@ void init_rseed(uint32_t start_seed)
  * \return      Random number between [0, 2^32 - 1]
  */
 uint32_t randqd_uint32()
-{
-    if (is_rseed_init == false)
-    {
-        init_rseed((uint32_t) time(NULL));
-        is_rseed_init = true;
-    }
-    
+{    
     rqd_seed = (uint32_t) (1664525UL * rqd_seed + 1013904223UL);
     return rqd_seed;
 }
