@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-#define RANDQD_VERSION "0.1.0"
+#define RANDQD_VERSION "0.2"
 
 
 /*
@@ -38,6 +38,15 @@
  * \return      Random number between [0, 2^32 - 1]
  */
 uint32_t randqd_uint32(uint32_t x);
+
+/**
+ * Returns a random value within the range [0, 1)
+ *
+ * \param       x   PRNG state
+ * \return      Random number between [0, 1)
+ */
+double randqd_double(uint32_t x);
+
 
 
 

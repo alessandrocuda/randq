@@ -36,3 +36,15 @@ inline uint32_t randqd_uint32(uint32_t x)
 {
     return (uint32_t) (1664525UL * x + 1013904223UL);
 }
+
+/**
+ * Return a random number in the range [0, 1)
+ *
+ * \param       x   PRNG state
+ * \return      Random number between [0, 1)
+ */
+inline double randqd_double(uint32_t x)
+{
+    return randqd_uint32(x) / (double) (1L << 32);
+}
+
