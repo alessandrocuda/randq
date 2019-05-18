@@ -25,7 +25,7 @@
  */
 
 bool is_rseed_init = false;
-uint32_t rqd_seed = 0UL;
+static uint32_t rqd_seed = 0UL;
 
 
 /**
@@ -33,7 +33,7 @@ uint32_t rqd_seed = 0UL;
  *
  * \start_seed      Started seed
  */
-void init_rseed(uint32_t start_seed)
+void srandqd(uint32_t start_seed)
 {
     rqd_seed = start_seed;
 }

@@ -31,7 +31,7 @@
 */
 
 
-void init_rseed(uint32_t start_seed);
+void srandqd(uint32_t start_seed);
 
 /**
  * Returns a random value within the range [0, 2^32 - 1]
