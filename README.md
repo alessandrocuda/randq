@@ -12,10 +12,7 @@ Generators, described in  "Numerical Recipes in C" Second Edition
 at page 284, relies on 32-bit arithmetic.
 It's works on a 32bit machine, so we need to use uint32_t.
 
-## Table of Contents (Optional)
-
-> If you're `README` has a lot of info, section headers might be nice.
-
+## Table of Contents 
 - [Usage](#usage)
 - [Testing](#testing)
 - [Support](#support)
