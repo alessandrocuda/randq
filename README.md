@@ -12,8 +12,18 @@ Generators, described in  "Numerical Recipes in C" Second Edition
 at page 284, relies on 32-bit arithmetic.
 It's works on a 32bit machine, so we need to use uint32_t.
 
+## Table of Contents (Optional)
+
+> If you're `README` has a lot of info, section headers might be nice.
+
+- [Usage](#usage)
+- [Testing](#testing)
+- [Support](#support)
+- [License](#license)
+
+
 ## Usage
-randqd.c and randqd.h should be dropped into an existing project and compiled along with it. The library provides 3 functions for generate a random number:
+``randqd.c`` and ``randqd``.h should be dropped into an existing project and compiled along with it. The library provides 3 functions for generate a random number:
 
 ```c
 void srandqd(uint32_t start_seed);
@@ -74,7 +84,18 @@ or build just ``randqd_utest``  or ``randqd_example``
 make randqd_utest              
 make randqd_example
 ```
+## Support
+
+Reach out to me at one of the following places!
+
+- Website at <a href="https://alessandrocudazzo.it" target="_blank">Alessandro Cudazzo</a>.
+- Twitter at <a href="http://twitter.com/alessandrocuda" target="_blank">`@alessandrocuda`</a>
 
 ## License
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
 This library is free software; you can redistribute it and/or modify it under
-the terms of the MIT license. See [LICENSE](LICENSE) for details.
+the terms of the MIT license. 
+
+- **[MIT license](LICENSE)**
+- Copyright 2019 © <a href="https://alessandrocudazzo.it" target="_blank">Alessandro Cudazzo</a>.
