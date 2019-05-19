@@ -32,21 +32,36 @@ Returns a unsigned long int random value within the range [0, 2^32 - 1]
 #### - double randqd_double();
 Returns a double random value within the range [0, 1)
 
+### Examples
+```c
+// v1 in the range 0 to 99
+uint32_t v1 = randqd_uint32() % 100;
+// v2 in the range 1 to 100
+uint32_t v2 = randqd_uint32() % 100 + 1;    
+// v3 in the range 1985-2014         
+uint32_t v3 = randqd_uint32() % 30 + 1985;          
+// v4 in the range -1 to 1
+double v4 = randqd_double()* 2.0 - 1.0;
+```
 ## Testing
-This repo proviedes a unit test done with CMocka and some usecase. 
+This repo proviedes a unit test done with CMocka and some examples. 
 ```bash
-./randqd_usecase    # show some usecase
+./randqd_usecase    # show some examples
 ./randqd_utest      # unit test performed with CMocka
 ```
-### Dependency
-To build ``randqd_utest``  you need CMocka installed on your system:
+### System requirements for building and running ``randqd_utest.c``
+To build ``randqd_utest``  you need CMocka as unit testing framework for C installed on your system:
 #### MacOS with Homebrew
 ```bash
 brew install cmocka
 ```
 #### Linux Ubuntu/Debian
+```bash
+apt-get install libcmocka-dev 
+```
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+### BUILD
+These instructions will get you a copy of ``randqd_utest`` and ``randqd_example`` up and running on your local machine for testing purposes.
 
 ```bash
 git clone https://github.com/alessandrocuda/randqd.git
@@ -54,8 +69,12 @@ cd randqd/
 make                # or 'make all'
 ```
 
+or build just ``randqd_utest``  or ``randqd_example``
+```bash
+make randqd_utest              
+make randqd_example
+```
+
 ## License
 This library is free software; you can redistribute it and/or modify it under
-the terms of the MIT license. 
-
-[MIT][mit-license] © [Alessandro Cudazzo][alessandrocuda]
+the terms of the MIT license. See [LICENSE](LICENSE) for details.
