@@ -1,8 +1,8 @@
 #
 # 'make depend' 		uses makedepend to automatically generate dependencies 
 #               		(dependencies are added to end of Makefile)
-# 'make' or 'make all'	build executable file 'randqd_usecase' and 'randqd_utest'
-# 'make randqd_usecase'		build executable file 'randqd_usecase'
+# 'make' or 'make all'	build executable file 'randqd_example' and 'randqd_utest'
+# 'make randqd_example'		build executable file 'randqd_example'
 # 'make randqd_utest'	build executable file 'randqd_utest'
 # 'make clean'  		removes all .o 
 # 'make clean_all'  	removes all .o and executable files
@@ -35,7 +35,7 @@ SOURCEDIR := .
 #COM_SOURCES := $(shell find $(SOURCEDIR) -name '*.c')
 COM_SOURCES := $(SOURCEDIR)/src/randqd.c
 RANDQD_TEST_SOURCES := $(SOURCEDIR)/randqd_utest.c  
-RANDQD_GEN_SOURCES := $(SOURCEDIR)/randqd_usecase.c
+RANDQD_GEN_SOURCES := $(SOURCEDIR)/randqd_example.c
 # define the C object files 
 #
 # This uses Suffix Replacement within a macro:
@@ -50,7 +50,7 @@ RANDQD_TEST_OBJS = $(RANDQD_TEST_SOURCES:.c=.o)
 ALL_OBJ = $(COM_OBJS) $(RANDQD_GEN_OBJS) $(RANDQD_TEST_OBJS)
 
 # define the executable file 
-RANDQD_GEN = randqd_usecase
+RANDQD_GEN = randqd_example
 RANDQD_TEST = randqd_utest
 
 #
@@ -65,7 +65,7 @@ all:    $(RANDQD_GEN) $(RANDQD_TEST)
 		@echo randqd_usecase and randqd_utest are been compiled
 
 $(RANDQD_GEN): $(COM_OBJS) $(RANDQD_GEN_OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) -o $(RANDQD_GEN) $(COM_OBJS) $(RANDQD_GEN_OBJS)  $(LIBS) $(LDFLAGS)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(RANDQD_GEN) $(COM_OBJS) $(RANDQD_GEN_OBJS)  $(LIBS)
 $(RANDQD_TEST): $(COM_OBJS) $(RANDQD_TEST_OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(RANDQD_TEST) $(COM_OBJS) $(RANDQD_TEST_OBJS) $(LFLAGS) $(LIBS) $(LDFLAGS)
 
