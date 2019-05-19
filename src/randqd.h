@@ -30,7 +30,11 @@
 *   It's works on a 32bit machine, so we need to use uint32_t.
 */
 
-
+/**
+ * Init the First Seed
+ *
+ * \start_seed      Started seed
+ */
 void srandqd(uint32_t start_seed);
 
 /**
