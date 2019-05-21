@@ -35,8 +35,8 @@
 *.i*86
 *.x86_64
 *.hex
-randqd_example
-randqd_utest
+randq_example
+randq_utest
 
 # Debug files
 *.dSYM/
