@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 // RANDQD LIB
-#include "src/randqd.h"
+#include "src/randq.h"
 /*
  * Robert Jenkins' 96 bit Mix Function
  */ 
@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
     {
         double rand_num = randqd_double()* 2.0 - 1.0;
         fprintf(stdout,"- double random number in the range [-1,1] : %f\n",rand_num);
-    }
+    }    
     
     return 0;
 }

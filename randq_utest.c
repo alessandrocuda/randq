@@ -9,7 +9,7 @@
 #include <cmocka.h>
 
 // RANDQD LIB
-#include "src/randqd.h"
+#include "src/randq.h"
 
 #define MAX_ITER 42000
 
