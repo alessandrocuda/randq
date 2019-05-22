@@ -138,7 +138,7 @@ make randqd_example
 ```
 
 ## TODO
-- [ ] add Thread safe to all functions: makes
+- [ ] add Thread safe to all functions
 
 ## Support
 
