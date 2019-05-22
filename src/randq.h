@@ -56,6 +56,7 @@ void srandqd(uint32_t start_seed);
  * \return      Random number between [0, 2^32 - 1]
  */
 uint32_t randqd_uint32();
+uint32_t randqd_uint32_r(uint32_t *seed); // thread_safe
 
 /**
  * Returns a random value within the range [0, 1)
@@ -63,6 +64,7 @@ uint32_t randqd_uint32();
  * \return      Random double number between [0, 1)
  */
 double randqd_double();
+double randqd_double_r(uint32_t *seed); // thread_safe
 
 /**
  * Init the First Seed for randq64
@@ -77,6 +79,7 @@ void srandq64(uint64_t start_seed);
  * \return      Random number between [0, 2^64 - 1]
  */
 uint64_t randq64_uint64();
+uint64_t randq64_uint64_r(uint64_t *seed); // thread_safe
 
 /**
  * Returns a random value within the range [0, 2^32 - 1]
@@ -84,6 +87,7 @@ uint64_t randq64_uint64();
  * \return      Random number between [0, 2^32 - 1]
  */
 uint32_t randq64_uint32();
+uint64_t randq64_uint32_r(uint64_t *seed); // thread_safe
 
 /**
  * Returns a random value within the range [0, 1)
@@ -91,5 +95,6 @@ uint32_t randq64_uint32();
  * \return      Random double number between [0, 1)
  */
 double randq64_double();
+uint64_t randq64_double_r(uint64_t *seed); // thread_safe
 
 #endif
