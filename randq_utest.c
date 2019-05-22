@@ -118,7 +118,9 @@ randq64_double_0_to_1(void **state)
             other, (double) other / MAX_ITER);
 
 }
-
+/*
+ * Calculate mean and variance for both method
+ */
 void mean_and_variance(char* method){
     double      sum = 0;
     double      mean, variance; 
