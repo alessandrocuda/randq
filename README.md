@@ -108,11 +108,11 @@ double v6 = randqdd_double()* 2.0 - 1.0;
 ## Testing
 This repo proviedes a unit test done with CMocka and some examples. 
 ```bash
-./randqd_usecase    # show some examples
-./randqd_utest      # unit test performed with CMocka
+./randq_usecase    # show some examples
+./randq_utest      # unit test performed with CMocka
 ```
-### System requirements for building and running ``randqd_utest.c``
-To build ``randqd_utest``  you need CMocka as unit testing framework for C installed on your system:
+### System requirements for building and running ``randq_utest.c``
+To build ``randq_utest``  you need CMocka as unit testing framework for C installed on your system:
 #### MacOS with Homebrew
 ```bash
 brew install cmocka
@@ -131,10 +131,10 @@ cd randq/
 make                # or 'make all'
 ```
 
-or build just ``randqd_utest``  or ``randqd_example``
+or build just ``randq_utest``  or ``randq_example``
 ```bash
-make randqd_utest              
-make randqd_example
+make randq_utest              
+make randq_example
 ```
 
 ## TODO
