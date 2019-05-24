@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-#define RANDQD_VERSION "2.0"
+#define RANDQD_VERSION "2.0.1"
 
 
 /*
