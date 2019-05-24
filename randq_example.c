@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
     struct timeval t;
     gettimeofday(&t, NULL);
     uint32_t seed = mix(t.tv_usec, t.tv_sec, pid);      // a mix for the seed
-    fprintf(stdout,"   ==> calculate a 'start seed': %u\n",seed);
+    fprintf(stdout,"   ==> calculate a 'start seed':  %"PRId32"\n",seed);
 
     fputs(" ---------------------------------------------------------------\n", stdout);
 	fputs("|  suspenders-and-belt, full-body-armor,never-any-doubt method  |\n",stdout);
