@@ -4,6 +4,8 @@
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <inttypes.h>
+
 
 // RANDQD LIB
 #include "src/randq.h"
@@ -46,8 +48,8 @@ int main(int argc, char const *argv[])
     uint64_t v1 = randq64_uint64() % 100;                // v1 in the range 0 to 99
     uint32_t v2 = randq64_uint32() % 30 + 1985;          // v3 in the range 1985-2014 
 
-    fprintf(stdout,"- random number in the range 0 to 99: %llu\n",v1);
-    fprintf(stdout,"- random number in the range 1985-2014: %u\n",v2);
+    fprintf(stdout,"- random number in the range 0 to 99: %"PRIu64"\n",v1);
+    fprintf(stdout,"- random number in the range 1985-2014: %"PRId32"\n",v2);
     
 
     for (size_t i = 0; i < 3; i++)
@@ -66,9 +68,9 @@ int main(int argc, char const *argv[])
     uint32_t v4 = randqd_uint32() % 100 + 1;            // v2 in the range 1 to 100
     uint32_t v5 = randqd_uint32() % 30 + 1985;          // v3 in the range 1985-2014 
 
-    fprintf(stdout,"- random number in the range 0 to 99: %u\n",v3);
-    fprintf(stdout,"- random number in the range 1 to 100: %u\n",v4);
-    fprintf(stdout,"- random number in the range 1985-2014 : %u\n",v5);
+    fprintf(stdout,"- random number in the range 0 to 99: %"PRId32"\n",v3);
+    fprintf(stdout,"- random number in the range 1 to 100: %"PRId32"\n",v4);
+    fprintf(stdout,"- random number in the range 1985-2014 : %"PRId32"\n",v5);
     
     for (size_t i = 0; i < 3; i++)
     {
